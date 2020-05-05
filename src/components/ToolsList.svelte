@@ -57,12 +57,6 @@
         text-align: start;
         padding: 5px;
     }
-    hr {
-        background-color: #8c8c8c;
-        border: 0 none;
-        color: #8c8c8c;
-        height: 1px;
-    }
     .icon-button {
         background-color: rgba(255, 255, 255, 0);
         border: none;

@@ -66,3 +66,10 @@ button:focus {
 	border-color: #666;
 }
 */
+
+hr {
+	background-color: #8c8c8c;
+	border: 0 none;
+	color: #8c8c8c;
+	height: 1px;
+}
