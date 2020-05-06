@@ -1,5 +1,6 @@
 <script>
 import {tools} from '../store.js';
+import ToolPackageCard from '../components/ToolPackageCard.svelte';
 
 export let currentRoute;
 export let params;
@@ -16,10 +17,12 @@ function displayPrice(price) {
 </script>
 
 <div class="content">
-    <h1>{tool.displayName}</h1>
+    <h1>
+        {tool.displayName}
+    </h1>
     <div class="flex-wrapper">
         <div class="tool-data-list">
-            <ul>
+            <ul class="tool-general-list">
                 <li>
                     <b>Mindestpreis:</b> {displayPrice(tool.minPricePerMonth)}
                 </li>
@@ -27,12 +30,15 @@ function displayPrice(price) {
                     <b>Maximale Teilnehmer:</b> {tool.maxParticipants}
                     <i class="fa fa-user"></i>
                 </li>
+                <li>
+                    <b>Webseite:</b> <a href="{tool.url}">{tool.displayName}</a>
+                </li>
                 {#if tool.packages.length > 0}
                     <li>Hat mehrere verschiedene Pakete/Kaufoptionen (s. unten)</li>
                 {/if}
             </ul>
             {#if tool.functions.length > 0}
-                <div>
+                <div class="tool-feature-list">
                     <div class="heading-2">
                         Features
                     </div>
@@ -48,44 +54,12 @@ function displayPrice(price) {
     </div>
     <div class="flex-wrapper-packages">
         {#each tool.packages as packageOption}
-            <div class="card package-card" style="background-color: {tool.color}">
-                <div class="card-title">
-                    <div class="heading-2">
-                        {packageOption.displayName}
-                    </div>
-                </div>
-                <div class="card-content">
-                    <ul class="package-data-list">
-                        <li>
-                            <b>Preis pro Monat:</b> {packageOption.pricePerMonth}
-                        </li>
-                        <li>
-                            <b>max. Teilnehmer/Meeting:</b>
-                            <span>
-                                {packageOption.maxParticipants}
-                                <i class="fa fa-user"></i>
-                            </span>
-                        </li>
-                    </ul>
-                    {#if packageOption.features.length > 0}
-                        <ul>
-                            {#each packageOption.features as feature}
-                                <li>{feature}</li>
-                            {/each}
-                        </ul>
-                    {/if}
-                </div>
-            </div>
+            <ToolPackageCard color="{tool.color}" packageOption="{packageOption}" />
         {/each}
     </div>
 </div>
 
 <style>
-    .package-data-list li {
-        display: flex;
-        justify-content: space-between;
-        padding-right: 20px;
-    }
     h1 {
         text-align: start;
         padding-left: 40px;
@@ -107,6 +81,10 @@ function displayPrice(price) {
         }
     }
 
+    .flex-wrapper-packages {
+        margin-top: 10px;
+    }
+
     @media(min-width: 900px) {
         .flex-wrapper-packages {
             display: flex;
@@ -120,17 +98,23 @@ function displayPrice(price) {
         }
     }
 
-    @media(min-width: 400px) {
-        .package-card {
-            margin: 10px;
-            min-width: 350px;
-        }
-    }
-
     .tool-data-list {
         flex: 1;
         text-align: start;
         padding-left: 2%;
+    }
+
+    @media(min-width: 1200px) {
+        .tool-data-list {
+            display: flex;
+        }
+    }
+
+    .tool-feature-list {
+        flex: 1;
+    }
+    .tool-general-list {
+        flex: 1;
     }
 
     img {

@@ -14,9 +14,11 @@
     {#each tools as tool}
         <div class="card" style="background-color: {tool.color}">
             <div class="card-title">
-                <div class="heading-1">
-                    {tool.displayName}
-                </div>
+                <Navigate to="tool-view/{tool.route}">
+                    <div class="heading-1">
+                        {tool.displayName}
+                    </div>
+                </Navigate>
                 <Navigate to="tool-view/{tool.route}">
                     <button class="icon-button">
                         <i class="fas fa-info"></i>

@@ -20,6 +20,12 @@
         font-size: 4em;
         font-weight: 100;
     }
+
+    @media(max-width: 430px) {
+        h1 {
+            font-size: 3em;
+        }
+    }
     p {
         margin-bottom: 75px;
     }

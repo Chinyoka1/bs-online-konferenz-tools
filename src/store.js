@@ -4,6 +4,7 @@ let tools = [
     {
         displayName: 'Cisco  Webex Meetings',
         route: 'cisco-webex',
+        url: 'https://www.webex.com/de/video-conferencing.html',
         maxParticipants: 1000,
         minPricePerMonth: '12.85',
         description:
@@ -59,6 +60,7 @@ let tools = [
     },
     {
         displayName: 'Skype',
+        url: 'https://www.skype.com/de/',
         route: 'skype',
         maxParticipants: 20,
         minPricePerMonth: '0',
@@ -77,6 +79,7 @@ let tools = [
     },
     {
         displayName: 'Microsoft Teams',
+        url: 'https://www.microsoft.com/de-de/microsoft-365/microsoft-teams/group-chat-software',
         route: 'microsoft-teams',
         maxParticipants: 250,
         minPricePerMonth: '0',
@@ -150,6 +153,7 @@ let tools = [
     {
         displayName: 'Google Duo',
         route: 'google-duo',
+        url: 'https://duo.google.com/intl/de/about/',
         maxParticipants: 12,
         minPricePerMonth: '0',
         description:
@@ -164,6 +168,7 @@ let tools = [
     {
         displayName: 'Zoom',
         route: 'zoom',
+        url: 'https://zoom.us/',
         maxParticipants: 1000,
         minPricePerMonth: '0',
         description:
@@ -264,6 +269,7 @@ let tools = [
     {
         displayName: 'Jitsi',
         route: 'jitsi',
+        url: 'https://jitsi.org/jitsi-meet/',
         maxParticipants: 75,
         minPricePerMonth: '0',
         description:
@@ -290,6 +296,7 @@ let tools = [
     {
         displayName: 'Slack',
         route: 'slack',
+        url: 'https://slack.com/intl/de-de/',
         maxParticipants: 15,
         minPricePerMonth: '6.25',
         description:
@@ -337,6 +344,7 @@ let tools = [
     {
         displayName: 'BigBlueButton',
         route: 'big-blue-button',
+        url: 'https://bigbluebutton.org/',
         maxParticipants: 100,
         minPricePerMonth: '0',
         description:
@@ -356,6 +364,7 @@ let tools = [
     {
         displayName: 'ClickMeeting',
         route: 'click-meeting',
+        url: 'https://clickmeeting.com/de',
         maxParticipants: 1000,
         minPricePerMonth: '0',
         description:
@@ -425,6 +434,7 @@ let tools = [
     {
         displayName: 'Mikogo',
         route: 'mikogo',
+        url: 'https://www.mikogo.de/',
         maxParticipants: 25,
         minPricePerMonth: '0',
         description: 'nach Vereinbarung auch bis zu 50 Teilnehmer möglich',
@@ -459,6 +469,7 @@ let tools = [
     {
         displayName: 'edudip',
         route: 'edudip',
+        url: 'https://www.edudip.com/de',
         maxParticipants: 1000,
         minPricePerMonth: '34',
         description: 'Preise varieren nach Art des Abonnements. Hier die Preise für das 24-Monate-Abo.',
@@ -512,6 +523,7 @@ let tools = [
     {
         displayName: 'FastViewer',
         route: 'fast-viewer',
+        url: 'https://fastviewer.com/de/',
         maxParticipants: 100,
         minPricePerMonth: '0',
         description: '',
@@ -532,6 +544,7 @@ let tools = [
     {
         displayName: 'GoMeetNow',
         route: 'go-meet-now',
+        url: 'https://www.gomeetnow.com/web-conferencing/index.html',
         maxParticipants: 100,
         minPricePerMonth: '0',
         description: '',
@@ -565,6 +578,7 @@ let tools = [
     {
         displayName: 'GatherPlace',
         route: 'gather-place',
+        url: 'https://www.gatherplace.com/',
         maxParticipants: 2000,
         minPricePerMonth: '26.70',
         description: 'sehr individuelle Preise, je nach Bedürfnissen',
@@ -581,6 +595,7 @@ let tools = [
     {
         displayName: 'eyeson',
         route: 'eyeson',
+        url: 'https://www.eyeson.com',
         maxParticipants: 100,
         minPricePerMonth: '9',
         description: 'ohne Premium Add-On maximal 25 Teilnehmer',
@@ -621,6 +636,7 @@ let tools = [
     {
         displayName: 'VSee',
         route: 'v-see',
+        url: 'https://vsee.com/',
         maxParticipants: 32,
         minPricePerMonth: '45',
         description: 'nicht mehr als 6 Teilnehmer pro Meeting empfohlen',

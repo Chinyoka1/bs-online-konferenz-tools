@@ -12,16 +12,21 @@ body {
 }
 
 a {
-	color: rgb(0,100,200);
 	text-decoration: none;
+	color: rgba(84, 181, 255, 0.8);
+}
+
+.card-title a, .card-title a:visited {
+	color: rgba(255, 255, 255, 0.8);
 }
 
 a:hover {
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 a:visited {
-	color: rgb(0,80,160);
+	color: rgba(84, 181, 255, 0.8);
 }
 
 label {
@@ -80,7 +85,7 @@ hr {
 }
 .card-content {
 	text-align: start;
-	padding: 5px;
+	padding-bottom: 5px;
 }
 main {
 	text-align: center;
