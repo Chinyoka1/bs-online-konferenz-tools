@@ -1,6 +1,5 @@
 <script>
-    export let tools;
-
+    import {tools} from '../store.js';
     function displayPrice(price) {
         price = parseFloat(price);
         if (price > 0) {
@@ -9,7 +8,6 @@
         return 'kostenlos';
     }
 </script>
-
 <div class="flex-wrapper">
     {#each tools as tool}
         <div class="card" style="background-color: {tool.color}">
@@ -36,27 +34,6 @@
 </div>
 
 <style>
-    .card {
-        flex-basis: 30%;
-        border-radius: 5px;
-        margin-bottom: 10px;
-        box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.5);
-        color: rgba(255, 255, 255, 0.8);
-    }
-    .heading {
-        font-size: x-large;
-        padding-left: 20px;
-    }
-    .card-title {
-        text-align: start;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-    }
-    .card-content {
-        text-align: start;
-        padding: 5px;
-    }
     .icon-button {
         background-color: rgba(255, 255, 255, 0);
         border: none;
@@ -67,7 +44,6 @@
         transition: background 0.5s;
     }
     .icon-button:hover {
-        background-color: rgba(255, 255, 255, 0.3);
         cursor: pointer;
         background: rgba(255, 255, 255, 0.4) radial-gradient(circle, transparent 1%, rgba(255, 255, 255, 0.1) 1%) center/15000%;
     }
