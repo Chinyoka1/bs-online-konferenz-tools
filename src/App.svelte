@@ -1,15 +1,10 @@
 <script>
-	import ToolsList from './components/ToolsList.svelte';
+    import Home from './views/Home.svelte';
 	export let tools;
 </script>
 
 <main>
-	<h1>Herzlich Willkommen!</h1>
-	<p>
-		Auf dieser Webseite werden Ihnen mehrere Programme und Tools zum Thema Online-Konferenzen vorgestellt.<br>
-		Hier finden Sie detaillierte Beschreibungen, Vergleiche und Anleitungen zu den verschiedenen Tools.
-	</p>
-	<ToolsList tools={tools} />
+    <Home tools={tools} />
 </main>
 
 <style>
