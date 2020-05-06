@@ -47,29 +47,31 @@ input[type="range"] {
 	height: 0;
 }
 
-/*
-button {
-	color: #333;
-	background-color: #f4f4f4;
-	outline: none;
-}
-
-button:disabled {
-	color: #999;
-}
-
-button:not(:disabled):active {
-	background-color: #ddd;
-}
-
-button:focus {
-	border-color: #666;
-}
-*/
-
 hr {
 	background-color: #8c8c8c;
 	border: 0 none;
 	color: #8c8c8c;
 	height: 1px;
+}
+
+.card {
+	flex-basis: 30%;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.5);
+	color: rgba(255, 255, 255, 0.8);
+}
+.heading {
+	font-size: x-large;
+	padding-left: 20px;
+}
+.card-title {
+	text-align: start;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+.card-content {
+	text-align: start;
+	padding: 5px;
 }
