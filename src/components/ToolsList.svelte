@@ -1,6 +1,8 @@
 <script>
     import {tools} from '../store.js';
     import {Navigate} from 'svelte-router-spa';
+    import FloatingFilterThing from './FloatingFilterThing.svelte';
+    let localTools = tools;
     function displayPrice(price) {
         price = parseFloat(price);
         if (price > 0) {
@@ -8,10 +10,29 @@
         }
         return 'kostenlos';
     }
+    let sortBy = 'min-price-per-month';
+    
+    $: switch (sortBy) {
+        case 'min-price-per-month': {
+            localTools.forEach(tool => parseFloat(tool.minPricePerMonth));
+            localTools = tools.sort((a, b) => {return a.minPricePerMonth - b.minPricePerMonth});
+            break;
+        }
+        case 'max-participants': {
+            localTools = tools.sort((a, b) => {return a.maxParticipants - b.maxParticipants});
+            localTools.reverse();
+            break;
+        }
+        case 'free-option': {
+            localTools = tools.filter(tool => ['0', 0].includes(tool.minPricePerMonth))
+            break;
+        }
+    }
 </script>
 
+<FloatingFilterThing bind:sortBy="{sortBy}" />
 <div class="flex-wrapper">
-    {#each tools as tool}
+    {#each localTools as tool}
         <div class="card" style="background-color: {tool.color}">
             <div class="card-title">
                 <Navigate to="tool-view/{tool.route}">

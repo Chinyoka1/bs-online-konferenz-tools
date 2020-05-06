@@ -98,6 +98,12 @@ function displayPrice(price) {
         }
     }
 
+    @media(max-width: 1172px) {
+        .flex-wrapper-packages {
+            justify-content: center;
+        }   
+    }
+
     .tool-data-list {
         flex: 1;
         text-align: start;
