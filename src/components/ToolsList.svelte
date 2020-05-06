@@ -1,5 +1,6 @@
 <script>
     import {tools} from '../store.js';
+    import {Navigate} from 'svelte-router-spa';
     function displayPrice(price) {
         price = parseFloat(price);
         if (price > 0) {
@@ -8,16 +9,19 @@
         return 'kostenlos';
     }
 </script>
+
 <div class="flex-wrapper">
     {#each tools as tool}
         <div class="card" style="background-color: {tool.color}">
             <div class="card-title">
-                <div class="heading">
+                <div class="heading-1">
                     {tool.displayName}
                 </div>
-                <button class="icon-button">
-                    <i class="fas fa-info"></i>
-                </button>
+                <Navigate to="tool-view/{tool.route}">
+                    <button class="icon-button">
+                        <i class="fas fa-info"></i>
+                    </button>
+                </Navigate>
             </div>
             <div class="card-content">
                 <ul>
@@ -26,6 +30,7 @@
                     </li>
                     <li>
                         <b>Maximale Teilnehmer:</b> {tool.maxParticipants}
+                        <i class="fa fa-user"></i>
                     </li>
                 </ul>
             </div>
@@ -38,7 +43,7 @@
         background-color: rgba(255, 255, 255, 0);
         border: none;
         color: white;
-        flex-basis: 30px;
+        width: 30px;
         border-radius: 7px;
         background-position: center;
         transition: background 0.5s;

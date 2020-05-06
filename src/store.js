@@ -3,6 +3,7 @@ import {readable} from 'svelte/store';
 let tools = [
     {
         displayName: 'Cisco  Webex Meetings',
+        route: 'cisco-webex',
         maxParticipants: 1000,
         minPricePerMonth: '12.85',
         description:
@@ -15,13 +16,13 @@ let tools = [
             'Planung von Konferenzen',
             'Verschlüsselung von Daten'
         ],
-        color: '#009688',
+        color: '#005073',
         packages: [
             {
-                displayName: 'Kostenlos', pricePerMonth: '0', maxParticipants: 100, features: []
+                displayName: 'Kostenlos', pricePerMonth: 'kostenlos', maxParticipants: 100, features: []
             },
             {
-                displayName: 'Starter-Paket', pricePerMonth: '12.85', maxParticipants: 50, features: [
+                displayName: 'Starter-Paket', pricePerMonth: '12.85 €', maxParticipants: 50, features: [
                     '5 GB Cloud Speicher',
                     'Integration in andere Anwendungen (z.B. Slack)',
                     'Aufzeichnung von Meetings',
@@ -30,7 +31,7 @@ let tools = [
                 ]
             },
             {
-                displayName: 'Plus-Paket', pricePerMonth: '17.30', maxParticipants: 100, features: [
+                displayName: 'Plus-Paket', pricePerMonth: '17.30 €', maxParticipants: 100, features: [
                     '5 GB Cloud Speicher',
                     'Integration in andere Anwendungen (z.B. Slack)',
                     'Aufzeichnung von Meetings',
@@ -41,7 +42,7 @@ let tools = [
                 ]
             },
             {
-                displayName: 'Business-Paket', pricePerMonth: '25.65', maxParticipants: 200, features: [
+                displayName: 'Business-Paket', pricePerMonth: '25.65 €', maxParticipants: 200, features: [
                     '10 GB Cloud Speicher',
                     'Integration in andere Anwendungen (z.B. Slack)',
                     'Aufzeichnung von Meetings',
@@ -58,6 +59,7 @@ let tools = [
     },
     {
         displayName: 'Skype',
+        route: 'skype',
         maxParticipants: 20,
         minPricePerMonth: '0',
         description:
@@ -70,11 +72,12 @@ let tools = [
             'Bildschirmübertragung',
             'Verschlüsselung von Daten'
         ],
-        color: '#03A9F4',
+        color: '#00AFF0',
         packages: []
     },
     {
         displayName: 'Microsoft Teams',
+        route: 'microsoft-teams',
         maxParticipants: 250,
         minPricePerMonth: '0',
         description:
@@ -84,16 +87,16 @@ let tools = [
             'Dateifreigabe',
             'Verschlüsselung von Daten'
         ],
-        color: '#5E35B1',
+        color: '#555BA4',
         packages: [
             {
-                displayName: 'Kostenlos', pricePerMonth: '0', maxParticipants: 250, features: [
+                displayName: 'Kostenlos', pricePerMonth: 'kostenlos', maxParticipants: 250, features: [
                     '2 GB Dateien pro Nutzer im Chat einfügen',
                     'Webversionen von Word, Excel und PowerPoint'
                 ]
             },
             {
-                displayName: 'Microsoft 365 Business Basic', pricePerMonth: '4.20', maxParticipants: 250, features: [
+                displayName: 'Microsoft 365 Business Basic', pricePerMonth: '4.20 €', maxParticipants: 250, features: [
                     '1 TB Dateien pro Nutzer im Chat einfügen',
                     'Konferenzen planen',
                     'Aufzeichnung',
@@ -107,7 +110,7 @@ let tools = [
             },
             {
                 displayName: 'Microsoft 365 Business Standard',
-                pricePerMonth: '10.50',
+                pricePerMonth: '10.50 €',
                 maxParticipants: 250,
                 features: [
                     '1 TB Dateien pro Nutzer im Chat einfügen',
@@ -124,7 +127,7 @@ let tools = [
                 ]
             },
             {
-                displayName: 'Office 365 E3', pricePerMonth: '19.70', maxParticipants: 250, features: [
+                displayName: 'Office 365 E3', pricePerMonth: '19.70 €', maxParticipants: 250, features: [
                     'Unbegrenzt Dateien im Chat einfügen',
                     'Konferenzen planen',
                     'Aufzeichnung',
@@ -146,6 +149,7 @@ let tools = [
     },
     {
         displayName: 'Google Duo',
+        route: 'google-duo',
         maxParticipants: 12,
         minPricePerMonth: '0',
         description:
@@ -159,15 +163,16 @@ let tools = [
     },
     {
         displayName: 'Zoom',
+        route: 'zoom',
         maxParticipants: 1000,
         minPricePerMonth: '0',
         description:
             '',
         functions: [],
-        color: '#2196F3',
+        color: '#2D90FF',
         packages: [
             {
-                displayName: 'Basic', pricePerMonth: '0', maxParticipants: 100, features: [
+                displayName: 'Basic', pricePerMonth: 'kostenlos', maxParticipants: 100, features: [
                     'Unbegrenzte Konferenzen zwischen 2 Personen',
                     'Limit von 40 Minuten bei Gruppenbesprechungen',
                     'Unbegrenzte Anzahl an Besprechungen',
@@ -180,7 +185,7 @@ let tools = [
                 ]
             },
             {
-                displayName: 'Pro', pricePerMonth: '13.99', maxParticipants: 100, features: [
+                displayName: 'Pro', pricePerMonth: '13.99 €', maxParticipants: 100, features: [
                     'Unbegrenzte Konferenzen zwischen 2 Personen',
                     'Limit von 40 Minuten bei Gruppenbesprechungen',
                     'Unbegrenzte Anzahl an Besprechungen',
@@ -199,7 +204,7 @@ let tools = [
                 ]
             },
             {
-                displayName: 'Business', pricePerMonth: '18.99', maxParticipants: 300, features: [
+                displayName: 'Business', pricePerMonth: '18.99 €', maxParticipants: 300, features: [
                     'Unbegrenzte Konferenzen zwischen 2 Personen',
                     'Limit von 40 Minuten bei Gruppenbesprechungen',
                     'Unbegrenzte Anzahl an Besprechungen',
@@ -225,7 +230,7 @@ let tools = [
                 ]
             },
             {
-                displayName: 'Enterprise', pricePerMonth: '18.99', maxParticipants: 1000, features: [
+                displayName: 'Enterprise', pricePerMonth: '18.99 €', maxParticipants: 1000, features: [
                     'Unbegrenzte Konferenzen zwischen 2 Personen',
                     'Limit von 40 Minuten bei Gruppenbesprechungen',
                     'Unbegrenzte Anzahl an Besprechungen',
@@ -258,6 +263,7 @@ let tools = [
     },
     {
         displayName: 'Jitsi',
+        route: 'jitsi',
         maxParticipants: 75,
         minPricePerMonth: '0',
         description:
@@ -278,11 +284,12 @@ let tools = [
             'Youtube Videos zusammen ansehen',
             'Ende-zu-Ende-Verschlüsselung'
         ],
-        color: '#3F51B5',
+        color: '#1D76BC',
         packages: []
     },
     {
         displayName: 'Slack',
+        route: 'slack',
         maxParticipants: 15,
         minPricePerMonth: '6.25',
         description:
@@ -297,16 +304,16 @@ let tools = [
             'Zwei-Faktor-Authentifizierung',
             'Support'
         ],
-        color: '#9C27B0',
+        color: '#4C154D',
         packages: [
             {
-                displayName: 'Standard', pricePerMonth: '6.25', maxParticipants: 15, features: [
+                displayName: 'Standard', pricePerMonth: '6.25 €', maxParticipants: 15, features: [
                     '10 GB Speicherplatz pro Mitglied',
                     'Posting-Berechtigungen nur für den Channel #allgemein verwalten'
                 ]
             },
             {
-                displayName: 'Plus', pricePerMonth: '11.75', maxParticipants: 15, features: [
+                displayName: 'Plus', pricePerMonth: '11.75 €', maxParticipants: 15, features: [
                     '20 GB Speicherplatz pro Mitglied',
                     'SAML-basiertes Einmaliges Anmelden (SSO)',
                     'Benutzer- und Berechtigungsverwaltung',
@@ -329,6 +336,7 @@ let tools = [
     },
     {
         displayName: 'BigBlueButton',
+        route: 'big-blue-button',
         maxParticipants: 100,
         minPricePerMonth: '0',
         description:
@@ -342,11 +350,12 @@ let tools = [
             'Interaktives Whiteboard',
             'Aufzeichnung'
         ],
-        color: '#303F9F',
+        color: '#272971',
         packages: []
     },
     {
         displayName: 'ClickMeeting',
+        route: 'click-meeting',
         maxParticipants: 1000,
         minPricePerMonth: '0',
         description:
@@ -369,12 +378,12 @@ let tools = [
         color: '#689F38',
         packages: [
             {
-                displayName: 'Kostenlose Testphase (7 Tage)', pricePerMonth: '0', maxParticipants: 5, features: [
+                displayName: 'Kostenlose Testphase (7 Tage)', pricePerMonth: 'kostenlos', maxParticipants: 5, features: [
                     '500 MB Speicherplatz für Dateien'
                 ]
             },
             {
-                displayName: 'Live', pricePerMonth: '22 - 215', maxParticipants: 1000, features: [
+                displayName: 'Live', pricePerMonth: '22 - 215 €', maxParticipants: 1000, features: [
                     '1 GB Speicherplatz für Dateien',
                     'Aufzeichnung',
                     'Speicherplatz für 6 Stunden Aufzeichnungen',
@@ -385,7 +394,7 @@ let tools = [
                 ]
             },
             {
-                displayName: 'Automated', pricePerMonth: '35 - 249', maxParticipants: 1000, features: [
+                displayName: 'Automated', pricePerMonth: '35 - 249 €', maxParticipants: 1000, features: [
                     '2 GB Speicherplatz für Dateien',
                     'Aufzeichnung',
                     'Speicherplatz für 10 Stunden Aufzeichnungen',
@@ -415,6 +424,7 @@ let tools = [
     },
     {
         displayName: 'Mikogo',
+        route: 'mikogo',
         maxParticipants: 25,
         minPricePerMonth: '0',
         description: 'nach Vereinbarung auch bis zu 50 Teilnehmer möglich',
@@ -428,19 +438,19 @@ let tools = [
             'Dateiübertragung',
             'Chat'
         ],
-        color: '#2196F3',
+        color: '#607ebb',
         packages: [
             {
-                displayName: 'Kostenlos (nur für Privatnutzer)', pricePerMonth: '0', maxParticipants: 2, features: []
+                displayName: 'Kostenlos (nur für Privatnutzer)', pricePerMonth: 'kostenlos', maxParticipants: 2, features: []
             },
             {
-                displayName: 'Standard', pricePerMonth: '12', maxParticipants: 2, features: []
+                displayName: 'Standard', pricePerMonth: '12 €', maxParticipants: 2, features: []
             },
             {
-                displayName: 'Professional', pricePerMonth: '15', maxParticipants: 25, features: []
+                displayName: 'Professional', pricePerMonth: '15 €', maxParticipants: 25, features: []
             },
             {
-                displayName: 'Team', pricePerMonth: '45', maxParticipants: 25, features: [
+                displayName: 'Team', pricePerMonth: '45 €', maxParticipants: 25, features: [
                     'mehrere Konferenzen gleichzeitig'
                 ]
             }
@@ -448,6 +458,7 @@ let tools = [
     },
     {
         displayName: 'edudip',
+        route: 'edudip',
         maxParticipants: 1000,
         minPricePerMonth: '34',
         description: 'Preise varieren nach Art des Abonnements. Hier die Preise für das 24-Monate-Abo.',
@@ -462,20 +473,20 @@ let tools = [
             'Terminverwaltung',
             'Anbindung an Newsletter-Dienste'
         ],
-        color: '#880E4F',
+        color: '#d9381b',
         packages: [
             {
-                displayName: 'Next 30', pricePerMonth: '34', maxParticipants: 30, features: []
+                displayName: 'Next 30', pricePerMonth: '34 €', maxParticipants: 30, features: []
             },
             {
-                displayName: 'Next 100', pricePerMonth: '69', maxParticipants: 100, features: [
+                displayName: 'Next 100', pricePerMonth: '69 €', maxParticipants: 100, features: [
                     '3 Co-Moderatoren',
                     'Moderatoren- und Teamverwaltung',
                     'Telefoneinwahl'
                 ]
             },
             {
-                displayName: 'Next 500', pricePerMonth: '139', maxParticipants: 500, features: [
+                displayName: 'Next 500', pricePerMonth: '139 €', maxParticipants: 500, features: [
                     '3 Co-Moderatoren',
                     'Moderatoren- und Teamverwaltung',
                     'Telefoneinwahl',
@@ -486,7 +497,7 @@ let tools = [
                 ]
             },
             {
-                displayName: 'Next 1000', pricePerMonth: '244', maxParticipants: 1000, features: [
+                displayName: 'Next 1000', pricePerMonth: '244 €', maxParticipants: 1000, features: [
                     '3 Co-Moderatoren',
                     'Moderatoren- und Teamverwaltung',
                     'Telefoneinwahl',
@@ -500,6 +511,7 @@ let tools = [
     },
     {
         displayName: 'FastViewer',
+        route: 'fast-viewer',
         maxParticipants: 100,
         minPricePerMonth: '0',
         description: '',
@@ -514,11 +526,12 @@ let tools = [
             'individuelle Anpassung (Funktionen, Logo, uvm.)',
             'Aufzeichnung'
         ],
-        color: '#FB8C00',
+        color: '#fb6d00',
         packages: []
     },
     {
         displayName: 'GoMeetNow',
+        route: 'go-meet-now',
         maxParticipants: 100,
         minPricePerMonth: '0',
         description: '',
@@ -532,10 +545,10 @@ let tools = [
             'Aufzeichnungen',
             'Dateienfreigabe'
         ],
-        color: '#4CAF50',
+        color: '#60b135',
         packages: [
             {
-                displayName: 'Basic Free', pricePerMonth: '0', maxParticipants: 100, features: [
+                displayName: 'Basic Free', pricePerMonth: 'kostenlos', maxParticipants: 100, features: [
                     'max. 40 Minuten Konferenzdauer'
                 ]
             },
@@ -551,6 +564,7 @@ let tools = [
     },
     {
         displayName: 'GatherPlace',
+        route: 'gather-place',
         maxParticipants: 2000,
         minPricePerMonth: '26.70',
         description: 'sehr individuelle Preise, je nach Bedürfnissen',
@@ -561,11 +575,12 @@ let tools = [
             'Chat',
             'Konferenz sperren'
         ],
-        color: '#2196F3',
+        color: '#1c7ac6',
         packages: []
     },
     {
         displayName: 'eyeson',
+        route: 'eyeson',
         maxParticipants: 100,
         minPricePerMonth: '9',
         description: 'ohne Premium Add-On maximal 25 Teilnehmer',
@@ -583,7 +598,7 @@ let tools = [
             'Ticket Support',
             'Räume sperren'
         ],
-        color: '#E91E63',
+        color: '#7b1240',
         packages: [
             {
                 displayName: 'Basic', pricePerMonth: 'ab $9', maxParticipants: 100, features: [
@@ -605,6 +620,7 @@ let tools = [
     },
     {
         displayName: 'VSee',
+        route: 'v-see',
         maxParticipants: 32,
         minPricePerMonth: '45',
         description: 'nicht mehr als 6 Teilnehmer pro Meeting empfohlen',
@@ -619,7 +635,7 @@ let tools = [
         color: '#689F38',
         packages: [
             {
-                displayName: 'Basic', pricePerMonth: '49', maxParticipants: 32, features: []
+                displayName: 'Basic', pricePerMonth: '49 €', maxParticipants: 32, features: []
             },
             {
                 displayName: 'Enterprise', pricePerMonth: 'individuell', maxParticipants: 32, features: [
