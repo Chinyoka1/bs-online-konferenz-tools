@@ -3,7 +3,8 @@
     let options = [
         {value: 'min-price-per-month', text: 'geringstem Mindestpreis', id: 1},
         {value: 'max-participants', text: 'maximaler Teilnehmerzahl', id: 2},
-        {value: 'free-option', text: 'nur mit kostenloser Option', id: 3}
+        {value: 'free-option', text: 'nur mit kostenloser Option', id: 3},
+        {value: 'large-meeting', text: 'min. 100 Teilnehmer', id: 4}
     ];
 </script>
 

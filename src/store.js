@@ -1,5 +1,3 @@
-import {readable} from 'svelte/store';
-
 let tools = [
     {
         displayName: 'Cisco  Webex Meetings',
@@ -18,6 +16,15 @@ let tools = [
             'Verschlüsselung von Daten'
         ],
         color: '#005073',
+        startGuide: [
+            'auf <a href="https://www.webex.com/de/video-conferencing.html">die Installationsseite</a> gehen',
+            'E-Mail Adresse eingeben und Kostenlos testen klicken',
+            'Land auswählen, Vor- und Nachnamen angeben und Fortfahren klicken',
+            'auf Bestätigungsemail warten',
+            'über den Link in der E-Mail ein Passwort festlegen',
+            'man wird auf eine Seite weitergeleitet, auf der man die Anwendung herunterladen kann',
+            'Anwendungsdatei speichern und ausführen'
+        ],
         packages: [
             {
                 displayName: 'Kostenlos', pricePerMonth: 'kostenlos', maxParticipants: 100, features: []
@@ -75,6 +82,11 @@ let tools = [
             'Verschlüsselung von Daten'
         ],
         color: '#00AFF0',
+        startGuide: [
+            'auf <a href="https://www.skype.com/de/get-skype/">die Installationsseite</a> gehen',
+            'Skype für Windows/Mac/Linux herunterladen (eigenes Betriebssystem auswählen)',
+            'Datei speichern und ausführen'
+        ],
         packages: []
     },
     {
@@ -91,6 +103,12 @@ let tools = [
             'Verschlüsselung von Daten'
         ],
         color: '#555BA4',
+        startGuide: [
+            'auf <a href="https://www.microsoft.com/de-de/microsoft-365/microsoft-teams/download-app">die Installationsseite</a> gehen',
+            'Installation auf Desktop oder Mobilgerät auswählen',
+            'Teams herunterladen klicken',
+            'Datei speichern und ausführen'
+        ],
         packages: [
             {
                 displayName: 'Kostenlos', pricePerMonth: 'kostenlos', maxParticipants: 250, features: [
@@ -163,6 +181,10 @@ let tools = [
             'Ende-zu-Ende-Verschlüsselung'
         ],
         color: '#2196F3',
+        startGuide: [
+            'auf die Webseite gehen und Google Duo ausprobieren klicken',
+            'Es ist keine Installation erforderlich. Man ist automatisch mit seinem Google-Konto angemeldet.'
+        ],
         packages: []
     },
     {
@@ -175,6 +197,11 @@ let tools = [
             '',
         functions: [],
         color: '#2D90FF',
+        startGuide: [
+            'auf <a href="https://zoom.us/download">die Installationsseite</a> gehen',
+            'Download Zoom-Client für Meetings auswählen',
+            'Datei speichern und ausführen'
+        ],
         packages: [
             {
                 displayName: 'Basic', pricePerMonth: 'kostenlos', maxParticipants: 100, features: [
@@ -291,6 +318,9 @@ let tools = [
             'Ende-zu-Ende-Verschlüsselung'
         ],
         color: '#1D76BC',
+        startGuide: [
+            'Jitsi Meet benötigt keine Installation oder Anmeldung, sondern <a href="https://meet.jit.si/">kann einfach über den Browser genutzt werden</a>'
+        ],
         packages: []
     },
     {
@@ -312,6 +342,22 @@ let tools = [
             'Support'
         ],
         color: '#4C154D',
+        startGuide: [
+            'auf die <a href="https://slack.com/intl/de-de/">Slack-Webseite</a> gehen',
+            'Slack starten und Neuen Workspace erstellen wählen',
+            'E-Mail-Adresse eingeben und bestätigen',
+            'Bestätigungsmail öffnen und den Code darin auf die Website kopieren',
+            'gewünschten Namen für den Workspace eingeben',
+            'Projekt angeben',
+            'übrige Infos eingeben oder überspringen',
+            'der Workspace kann dann über den Browser oder mit der herunterladbaren genutzt werden',
+            'zum Download der App: auf die <a href="https://slack.com/intl/de-de/downloads/windows">Installationsseite</a> gehen',
+            'Downloadoption auswählen',
+            'Datei speichern und ausführen',
+            'in der Anwendung Anmelden klicken, wodurch man auf eine Webseite weitergeleitet wird',
+            'die URL des neu erstellten Worspace angeben und Weiter klicken',
+            'man ist nun in der Anwendung angemeldet und kann den Workspace auch darüber nutzen'
+        ],
         packages: [
             {
                 displayName: 'Standard', pricePerMonth: '6.25 €', maxParticipants: 15, features: [
@@ -359,6 +405,9 @@ let tools = [
             'Aufzeichnung'
         ],
         color: '#272971',
+        startGuide: [
+            'Von BigBlueButton wird eine ausführliche <a href="https://docs.bigbluebutton.org/2.2/install.html">Anleitung zur Installation</a> bereitgestellt.'
+        ],
         packages: []
     },
     {
@@ -385,6 +434,9 @@ let tools = [
             'Support'
         ],
         color: '#689F38',
+        startGuide: [
+            '<a href="https://clickmeeting.com/de/free-signup">kostenlos registrieren</a>'
+        ],
         packages: [
             {
                 displayName: 'Kostenlose Testphase (7 Tage)', pricePerMonth: 'kostenlos', maxParticipants: 5, features: [
@@ -449,6 +501,9 @@ let tools = [
             'Chat'
         ],
         color: '#607ebb',
+        startGuide: [
+            'auf die <a href="https://www.mikogo.de/download/">Installationsseite</a> gehen und den Schritten folgen'
+        ],
         packages: [
             {
                 displayName: 'Kostenlos (nur für Privatnutzer)', pricePerMonth: 'kostenlos', maxParticipants: 2, features: []
@@ -485,6 +540,10 @@ let tools = [
             'Anbindung an Newsletter-Dienste'
         ],
         color: '#d9381b',
+        startGuide: [
+            '<a href="https://www.edudip.com/de/registrieren?ref=next-btn-menu">hier</a> kostenlose Testphase starten oder',
+            '<a href="https://www.edudip.com/de/preise">hier</a> kaufen'
+        ],
         packages: [
             {
                 displayName: 'Next 30', pricePerMonth: '34 €', maxParticipants: 30, features: []
@@ -539,6 +598,9 @@ let tools = [
             'Aufzeichnung'
         ],
         color: '#fb6d00',
+        startGuide: [
+            '<a href="https://fastviewer.com/demo/FastViewer_QuickStart-Guide-Instant-Meeting.pdf">von FastViewer bereitgestellter Quick Start Guide</a>'
+        ],
         packages: []
     },
     {
@@ -559,6 +621,10 @@ let tools = [
             'Dateienfreigabe'
         ],
         color: '#60b135',
+        startGuide: [
+            '<a href="https://www.gomeetnow.com/aspx/UserObject/Registration.aspx?redirect=Y&mode=try">hier</a> registrieren',
+            'einloggen und Meeting hosten oder beitreten'
+        ],
         packages: [
             {
                 displayName: 'Basic Free', pricePerMonth: 'kostenlos', maxParticipants: 100, features: [
@@ -590,6 +656,9 @@ let tools = [
             'Konferenz sperren'
         ],
         color: '#1c7ac6',
+        startGuide: [
+            'auf die <a href="https://www.gatherplace.com/download">Installationsseite</a> gehen, Download auswählen und den Schritten folgen'
+        ],
         packages: []
     },
     {
@@ -614,6 +683,9 @@ let tools = [
             'Räume sperren'
         ],
         color: '#7b1240',
+        startGuide: [
+            '<a href="https://appsumo.com/eyeson/#appsumo-plans">hier</a> Plan auswählen und kaufen'
+        ],
         packages: [
             {
                 displayName: 'Basic', pricePerMonth: 'ab $9', maxParticipants: 100, features: [
@@ -649,6 +721,9 @@ let tools = [
             'Online Tutorial Videos und Anleitungen'
         ],
         color: '#689F38',
+        startGuide: [
+            '<a href="https://vsee.com/pricing/">hier</a> kaufen'
+        ],
         packages: [
             {
                 displayName: 'Basic', pricePerMonth: '49 €', maxParticipants: 32, features: []

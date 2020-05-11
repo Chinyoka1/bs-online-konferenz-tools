@@ -27,6 +27,10 @@
             localTools = tools.filter(tool => ['0', 0].includes(tool.minPricePerMonth))
             break;
         }
+        case 'large-meeting': {
+            localTools = tools.filter(tool => tool.maxParticipants >= 100);
+            break;
+        }
     }
 </script>
 

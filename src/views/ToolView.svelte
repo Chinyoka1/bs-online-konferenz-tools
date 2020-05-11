@@ -6,7 +6,7 @@ export let currentRoute;
 export let params;
 const currentToolName = currentRoute.namedParams.tool;
 const tool = tools.find(tool => tool.route === currentToolName);
-let logo = `../images/${tool.route}.png`;
+let logo = `../images/logos/${tool.route}.png`;
 function displayPrice(price) {
     price = parseFloat(price);
     if (price > 0) {
@@ -52,11 +52,16 @@ function displayPrice(price) {
         </div>
         <img src="{logo}" alt="Logo von {tool.displayName}">
     </div>
-    <div class="flex-wrapper-packages">
-        {#each tool.packages as packageOption}
-            <ToolPackageCard color="{tool.color}" packageOption="{packageOption}" />
-        {/each}
-    </div>
+    {#if tool.packages.length > 0}
+        <div class="heading-1">
+            Kaufoptionen / Pakete:
+        </div>
+        <div class="flex-wrapper-packages">
+            {#each tool.packages as packageOption}
+                <ToolPackageCard color="{tool.color}" packageOption="{packageOption}" />
+            {/each}
+        </div>
+    {/if}
 </div>
 
 <style>

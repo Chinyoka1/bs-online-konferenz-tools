@@ -21,9 +21,14 @@
         font-weight: 100;
     }
 
-    @media(max-width: 430px) {
+    @media(max-width: 450px) {
         h1 {
             font-size: 3em;
+        }
+    }
+    @media(max-width: 350px) {
+        h1 {
+            font-size: 2em;
         }
     }
     p {
