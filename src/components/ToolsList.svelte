@@ -88,7 +88,7 @@
         background-color: rgba(255, 255, 255, 0.3);
         outline: 0;
     }
-    @media(min-width: 900px) {
+    @media(min-width: 920px) {
         .flex-wrapper {
             display: flex;
             justify-content: space-around;

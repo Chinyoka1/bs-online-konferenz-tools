@@ -9,8 +9,8 @@
 </script>
 
 <div class="card floater">
-    <label>Sortieren nach:</label>
-    <select bind:value="{sortBy}">
+    <label for="filters">Sortieren nach:</label>
+    <select id="filters" bind:value="{sortBy}">
         {#each options as option (option.id)}
             <option id="{option.id}" value="{option.value}">
                 {option.text}

@@ -16,27 +16,30 @@ function displayPrice(price) {
 }
 </script>
 
-<div class="content">
+<section class="content">
     <h1>
         {tool.displayName}
     </h1>
     <div class="flex-wrapper">
         <div class="tool-data-list">
-            <ul class="tool-general-list">
-                <li>
-                    <b>Mindestpreis:</b> {displayPrice(tool.minPricePerMonth)}
-                </li>
-                <li>
-                    <b>Maximale Teilnehmer:</b> {tool.maxParticipants}
-                    <i class="fa fa-user"></i>
-                </li>
-                <li>
-                    <b>Webseite:</b> <a href="{tool.url}">{tool.displayName}</a>
-                </li>
-                {#if tool.packages.length > 0}
-                    <li>Hat mehrere verschiedene Pakete/Kaufoptionen (s. unten)</li>
-                {/if}
-            </ul>
+            <div class="tool-general-list">
+                <div class="heading-2">Allgemein</div>
+                <ul>
+                    <li>
+                        <b>Mindestpreis:</b> {displayPrice(tool.minPricePerMonth)}
+                    </li>
+                    <li>
+                        <b>Maximale Teilnehmer:</b> {tool.maxParticipants}
+                        <i class="fa fa-user"></i>
+                    </li>
+                    <li>
+                        <b>Webseite:</b> <a href="{tool.url}">{tool.displayName}</a>
+                    </li>
+                    {#if tool.packages.length > 0}
+                        <li>Hat mehrere verschiedene Pakete/Kaufoptionen (s. unten)</li>
+                    {/if}
+                </ul>
+            </div>
             {#if tool.functions.length > 0}
                 <div class="tool-feature-list">
                     <div class="heading-2">
@@ -62,7 +65,7 @@ function displayPrice(price) {
             {/each}
         </div>
     {/if}
-</div>
+</section>
 
 <style>
     h1 {
