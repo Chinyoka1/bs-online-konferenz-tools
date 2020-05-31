@@ -4,8 +4,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public -s",
-    "deploy": "npm run clean && npm run export && node ./scripts/gh-pages.js"
+    "start": "sirv public -s"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "11.0.2",
@@ -14,8 +13,7 @@
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^5.1.2",
-    "svelte": "^3.0.0",
-    "sapper": "^0.27.0"
+    "svelte": "^3.0.0"
   },
   "dependencies": {
     "sirv-cli": "^0.4.4",
