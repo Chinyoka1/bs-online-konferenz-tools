@@ -55,6 +55,30 @@ function displayPrice(price) {
         </div>
         <img src="{logo}" alt="Logo von {tool.displayName}">
     </div>
+    <div>
+        <article>
+            <div class="heading-1">
+                So können Sie gleich starten:
+            </div>
+            <ul>
+                {#each tool.startGuide as startGuideItem}
+                    <li>
+                        {@html startGuideItem}
+                    </li>
+                {/each}
+            </ul>
+        </article>
+    </div>
+    <div>
+        <article>
+            <div class="heading-1">
+                Technische Vorraussetzungen
+            </div>
+            <p>
+                {@html tool.preconditions}
+            </p>
+        </article>
+    </div>
     {#if tool.packages.length > 0}
         <div class="heading-1">
             Kaufoptionen / Pakete:
@@ -140,5 +164,8 @@ function displayPrice(price) {
     .content {
         padding: 1em;
         margin: 0 auto;
+    }
+    p {
+        padding-left: 20px;
     }
 </style>

@@ -1,6 +1,7 @@
 <script>
 	import {Router, navigateTo} from 'svelte-router-spa';
 	import {routes} from './routes';
+	import Footer from './components/Footer.svelte';
 </script>
 
 <nav class="top-nav">
@@ -15,24 +16,7 @@
 <main>
 	<Router {routes} />
 </main>
-<footer>
-	<nav>
-		<button
-				tabindex="2"
-				class="footer-item"
-				on:click={() => navigateTo('/impressum')}
-		>
-			<i class="fa fa-address-book"></i> Impressum
-		</button>
-		<button
-				tabindex="3"
-				class="footer-item"
-				on:click={() => navigateTo('/datenschutzerklaerung')}
-		>
-			<i class="fa fa-user-shield"></i> Datenschutzerklärung
-		</button>
-	</nav>
-</footer>
+<Footer/>
 
 <style>
 	.top-nav {
@@ -48,21 +32,9 @@
 	.home-heading:hover {
 		background-color: #343434;
 	}
-	.footer-item {
-		font-size: large;
-		margin-left: 20px;
-		cursor: pointer;
-	}
 	:global(body) {
 		background-color: #232323;
 		color: #c8c8c8;
-	}
-	footer {
-		display: flex;
-		justify-content: flex-end;
-		padding: 40px;
-		background-color: #424242;
-		margin-top: auto;
 	}
 	button {
 		background: none;

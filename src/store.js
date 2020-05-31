@@ -63,7 +63,11 @@ let tools = [
                     'Branding- und Anpassungsmöglichkeiten'
                 ]
             }
-        ]
+        ],
+        preconditions: `Man kann Cisco Webex Meetings auf Windows, Linux, Mac OS, über die Mobile App auf Android und iOS
+            oder einfach über einen Webbrowser nutzen. Mehr Informationen finden Sie 
+            <a href="https://www.cisco.com/c/en/us/td/docs/collaboration/CWMS/b_System_Requirements/b_System_Requirements_chapter_00.html">
+            hier</a>.`
     },
     {
         displayName: 'Skype',
@@ -87,7 +91,10 @@ let tools = [
             'Skype für Windows/Mac/Linux herunterladen (eigenes Betriebssystem auswählen)',
             'Datei speichern und ausführen'
         ],
-        packages: []
+        packages: [],
+        preconditions: `Skype kann über Windows, Mac, Linux, Android, iOS oder einen Webbrowser genutzt werden.
+            Die genauen technischen Vorraussetzungen für die einzelnen Systeme und Geräte können Sie 
+            <a href="https://support.skype.com/en/faq/fa10328/what-are-the-system-requirements-for-skype">hier</a> nachlesen.`
     },
     {
         displayName: 'Microsoft Teams',
@@ -166,7 +173,10 @@ let tools = [
                     'Begleitete FastTrack-Bereitstellung'
                 ]
             },
-        ]
+        ],
+        preconditions: `Teams kann auf Windows, Mac OS, Linux, Android und iOS genutzt werden.
+            <a href="https://docs.microsoft.com/de-de/microsoftteams/hardware-requirements-for-the-teams-app">
+            Hier</a> finden Sie genauere Informationen zu den Hardware-Vorraussetzungen.`
     },
     {
         displayName: 'Google Duo',
@@ -185,7 +195,8 @@ let tools = [
             'auf die Webseite gehen und Google Duo ausprobieren klicken',
             'Es ist keine Installation erforderlich. Man ist automatisch mit seinem Google-Konto angemeldet.'
         ],
-        packages: []
+        packages: [],
+        preconditions: `Google Duo ist als App auf Android und iOS verfügbar und kann außerdem über einen Webbrowser genutzt werden.`
     },
     {
         displayName: 'Zoom',
@@ -291,7 +302,11 @@ let tools = [
                     'Paketrabatte bei Webinars und Zoom Rooms'
                 ]
             },
-        ]
+        ],
+        preconditions: `Zoom kann über Windows, Mac OS, Linux und auf mobilen Geräten mit Android und iOS genutzt werden.
+            Auf folgenden Seiten finden Sie mehr zu den <a href="https://support.zoom.us/hc/de/articles/201362023-Systemanforderungen-für-PC-Mac-und-Linux">
+            Anforderungen für PCs</a> und <a href="https://support.zoom.us/hc/de/articles/201179966-Systemanforderungen-für-iOS-und-Android">
+            Anforderungen auf Mobilen Geräten</a>.`
     },
     {
         displayName: 'Jitsi',
@@ -321,7 +336,8 @@ let tools = [
         startGuide: [
             'Jitsi Meet benötigt keine Installation oder Anmeldung, sondern <a href="https://meet.jit.si/">kann einfach über den Browser genutzt werden</a>'
         ],
-        packages: []
+        packages: [],
+        preconditions: ``
     },
     {
         displayName: 'Slack',
@@ -385,7 +401,8 @@ let tools = [
                     'Organisationsweite Suche, Nachrichtenübermittlung und fokussierte Channels für Bekanntmachungen'
                 ]
             },
-        ]
+        ],
+        preconditions: ``
     },
     {
         displayName: 'BigBlueButton',
@@ -408,7 +425,8 @@ let tools = [
         startGuide: [
             'Von BigBlueButton wird eine ausführliche <a href="https://docs.bigbluebutton.org/2.2/install.html">Anleitung zur Installation</a> bereitgestellt.'
         ],
-        packages: []
+        packages: [],
+        preconditions: ``
     },
     {
         displayName: 'ClickMeeting',
@@ -481,7 +499,8 @@ let tools = [
                     'Zusätzlicher Support, Services und Betreuung'
                 ]
             }
-        ]
+        ],
+        preconditions: ``
     },
     {
         displayName: 'Mikogo',
@@ -519,7 +538,8 @@ let tools = [
                     'mehrere Konferenzen gleichzeitig'
                 ]
             }
-        ]
+        ],
+        preconditions: ``
     },
     {
         displayName: 'edudip',
@@ -577,7 +597,8 @@ let tools = [
                     'API-Zugang'
                 ]
             }
-        ]
+        ],
+        preconditions: ``
     },
     {
         displayName: 'FastViewer',
@@ -601,7 +622,8 @@ let tools = [
         startGuide: [
             '<a href="https://fastviewer.com/demo/FastViewer_QuickStart-Guide-Instant-Meeting.pdf">von FastViewer bereitgestellter Quick Start Guide</a>'
         ],
-        packages: []
+        packages: [],
+        preconditions: ``
     },
     {
         displayName: 'GoMeetNow',
@@ -639,7 +661,8 @@ let tools = [
                     'unbegrenzte Konferenzdauer'
                 ]
             },
-        ]
+        ],
+        preconditions: ``
     },
     {
         displayName: 'GatherPlace',
@@ -659,7 +682,8 @@ let tools = [
         startGuide: [
             'auf die <a href="https://www.gatherplace.com/download">Installationsseite</a> gehen, Download auswählen und den Schritten folgen'
         ],
-        packages: []
+        packages: [],
+        preconditions: ``
     },
     {
         displayName: 'eyeson',
@@ -703,7 +727,8 @@ let tools = [
                     'eigener Support Manager'
                 ]
             }
-        ]
+        ],
+        preconditions: ``
     },
     {
         displayName: 'VSee',
@@ -735,7 +760,8 @@ let tools = [
                     'Live Support'
                 ]
             }
-        ]
+        ],
+        preconditions: ``
     }
 ]
 
