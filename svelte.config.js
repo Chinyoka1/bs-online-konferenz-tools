@@ -1,4 +1,4 @@
 module.exports = {
-    publicPath: '/public',
+    publicPath: '/bs-online-meeting-tools',
     outputDir: 'public'
 }
