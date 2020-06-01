@@ -6,7 +6,7 @@ export let currentRoute;
 export let params;
 const currentToolName = currentRoute.namedParams.tool;
 const tool = tools.find(tool => tool.route === currentToolName);
-let logo = `../images/logos/${tool.route}.png`;
+let logo = `images/logos/${tool.route}.png`;
 function displayPrice(price) {
     price = parseFloat(price);
     if (price > 0) {
